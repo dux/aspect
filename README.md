@@ -3,9 +3,9 @@
 ### About
 
 
-Simple helper that reads attributes assigned to ruby methods, similar like python function decorators.
+Simple helper that reads attributes assigned to ruby methods, similar to python function decorators.
 
-If you have file root_controller.rb
+If you have file called root_controller.rb
 
 	class RootController < ApplicationController
 	
@@ -16,7 +16,7 @@ If you have file root_controller.rb
 	  end
 	end
 
-And somewhere in code you execute
+if you execute
 	
 	p RootController.aspects 
 	
@@ -30,7 +30,15 @@ This can be useful if you for example want to have defined routes inside a rails
 
 in routes.rb you can define something like this
 	
-	App::Application.routes.draw do
+  #= get
+  def index
+    ...
+
+  #= post
+  def action
+    ...
+
+  App::Application.routes.draw do
 		
 		aspect_routes UsersController
 		
